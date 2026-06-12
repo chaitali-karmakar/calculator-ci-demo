@@ -1,5 +1,5 @@
-const { add } = require("./calculator");
-const { multiply } = require("./calculator");
+import { add } from "./calculator";
+import { multiply } from "./calculator";
 
 test("adds 2+3", () => {
     expect(add(2, 3)).toBe(5);
