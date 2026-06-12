@@ -8,7 +8,7 @@
 function add(a, b) {
     let result = a + b;
 
-    const unused = 100;  //variable defined but not used. This will fail the linting process.
+    //  const unused = 100;  //variable defined but not used. This will fail the linting process.
 
     return result
 }
