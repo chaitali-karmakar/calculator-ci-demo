@@ -6,11 +6,11 @@ test("adds 2+3", () => {
 });
 
 test("adds 3+3", () => {
-    expect(add(3, 3)).toBe(0);
+    expect(add(3, 3)).toBe(6);
 
 });
 
 test("adds 5+3", () => {
-    expect(add(5, 3)).toBe(10);
+    expect(add(5, 3)).toBe(8);
 
 });
