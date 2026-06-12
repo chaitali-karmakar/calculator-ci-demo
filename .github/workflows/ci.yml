@@ -1,0 +1,59 @@
+name: Calculator CI/CD
+on:
+  push:
+    branches: 
+        - main
+  pull_request:
+    branches: 
+        - main
+
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * *"
+  
+jobs:
+  build-calculator:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Checkout code 
+      uses: actions/checkout@v4
+
+    - name: Setup Code
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Jest tests
+      run: npm test
+
+    - name: Run lint
+      run: npm run lint
+    
+    - name: Build Project
+      run: echo "Building application"
+
+    - name: Deploy Project
+      run: echo "Deploy Succesfully"
+      
+  nightly-report:
+    runs-on: ubuntu-latest
+
+    if: github.event_name=='schedule'
+
+    steps:
+
+      - name: Generate Report
+        run: echo "Generating Report"
+
+  
+# It replaces having to write code like this:
+# 1. Log into GitHub securely
+# 2. Tell the computer where your repository is
+# 3. Run: git init
+# 4. Run: git remote add origin ...
+# 5. Run: git fetch
+# 6. Run: git checkout main
