@@ -14,3 +14,12 @@ test("adds 5+3", () => {
     expect(add(5, 3)).toBe(8);
 
 });
+
+test("multiply 2*3", () => {
+    expect(multiply(2, 3)).toBe(6);
+
+});
+
+test('multiplies two numbers', () => {
+    expect(multiply(3, 3)).toBe(9);
+});
