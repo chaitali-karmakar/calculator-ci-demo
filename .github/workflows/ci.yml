@@ -3,16 +3,18 @@ on:
   push:
     branches: 
         - main
+
   pull_request:
     branches: 
-        - main
+    - main
 
-  workflow_dispatch:
+  workflow_dispatch: # this is for creating a button in Github for triggering the workflow manually
+
   schedule:
     - cron: "0 8 * * *"
   
 jobs:
-  build-calculator:
+  build-calculator: # job name , we can give any name here
     runs-on: ubuntu-latest
     steps:
     
@@ -40,14 +42,17 @@ jobs:
       run: echo "Deploy Succesfully"
       
   nightly-report:
-    runs-on: ubuntu-latest
-
-    if: github.event_name=='schedule'
+    runs-on: ubuntu-latest 
+    # This job will run only when the schedule trigger is used
+    if: github.event_name=='schedule' || github.event_name == 'workflow_dispatch'
 
     steps:
+    
+    - name: Show Event
+      run: echo "Triggered by ${{ github.event_name }}"
 
-      - name: Generate Report
-        run: echo "Generating Report"
+    - name: Generate Report
+      run: echo "Generating Report"
 
   
 # It replaces having to write code like this:
