@@ -1,9 +1,9 @@
 //correct code
-function add(a, b) {
+/*function add(a, b) {
 
     return a + b;
 
-}
+}*/
 /*//quality error made purposely
 function add(a, b) {
     let result = a + b;
@@ -13,8 +13,9 @@ function add(a, b) {
     return result
 }*/
 
-function multiply(a, b) {
+function multiplication(a, b) {
     return a * b; // NEW MULTIPLICATION FEATURE
 }
-module.exports = { add };
-module.exports = { multiply };
+
+
+module.exports = { multiplication };
