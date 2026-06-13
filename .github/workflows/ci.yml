@@ -11,7 +11,7 @@ on:
   workflow_dispatch: # this is for creating a button in Github for triggering the workflow manually
 
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "53 15  * * *"
   
 jobs:
   build-calculator: # job name , we can give any name here
