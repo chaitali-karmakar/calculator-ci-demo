@@ -16,6 +16,8 @@ function add(a, b) {
 function multiplication(a, b) {
     return a * b; // NEW MULTIPLICATION FEATURE
 }
+function addition(a, b) {
+    return a + b; // NEW ADDITION FEATURE
+}
 
-
-module.exports = { multiplication };
+module.exports = { multiplication, addition };
