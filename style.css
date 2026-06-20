@@ -1,0 +1,27 @@
+body {
+    background-color: lightseagreen;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(235, 124, 87);
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}

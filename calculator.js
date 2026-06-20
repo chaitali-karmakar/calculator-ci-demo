@@ -13,11 +13,30 @@ function add(a, b) {
     return result
 }*/
 
-function multiplication(a, b) {
-    return a * b; // NEW MULTIPLICATION FEATURE
-}
-function addition(a, b) {
-    return a + b; // NEW ADDITION FEATURE
+function add(a, b) {
+    return a + b
 }
 
-module.exports = { multiplication, addition };
+function subtract(a, b) {
+    return a - b
+}
+
+function divide(a, b) {
+    return a / b
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function square(a) {
+    return a * a
+}
+
+function cube(a) {
+    return a * a * a
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { add, subtract, divide, multiply, square, cube };
+}
