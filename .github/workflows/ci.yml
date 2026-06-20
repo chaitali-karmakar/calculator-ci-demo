@@ -13,7 +13,16 @@ on:
   schedule:
     - cron: "57 11  * * *"
   
+  workflow_run:
+    
 jobs:
+  hello:  #New job added to print hello message #Assignment work
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Print Hello Message 
+      run: echo "Hello Everyone"  
+
   build-calculator: # job name , we can give any name here
     runs-on: ubuntu-latest
     steps:
@@ -40,6 +49,19 @@ jobs:
 
     - name: Deploy Project
       run: echo "Deploy Succesfully"
+
+    # New jobs added for assignment by Chaitali
+    - name: Show Node version
+      run: node -v
+
+    - name: Show NPM version
+      run: npm --version
+
+    - name: Show Event
+      run: 'echo "Event type: ${{ github.event_name }}"'
+
+    - name: Show Date
+      run: 'echo "Date: $(date)"'
       
   nightly-report:
     runs-on: ubuntu-latest 
