@@ -3,6 +3,7 @@ on:
   push:
     branches: 
         - main
+        - feature-workflow-enhancements
 
   pull_request:
     branches: 
@@ -11,7 +12,7 @@ on:
   workflow_dispatch: # this is for creating a button in Github for triggering the workflow manually
 
   schedule:
-    - cron: "57 11  * * *"
+    - cron: "*/5 * * * *" #change minutes to 0 to run on every hour 
   
   workflow_run:
     
@@ -77,10 +78,3 @@ jobs:
       run: echo "Generating Report"
 
   
-# It replaces having to write code like this:
-# 1. Log into GitHub securely
-# 2. Tell the computer where your repository is
-# 3. Run: git init
-# 4. Run: git remote add origin ...
-# 5. Run: git fetch
-# 6. Run: git checkout main
