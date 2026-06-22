@@ -1,5 +1,7 @@
 # Calculator CI/CD Demo
 
+This is a simple calculator application that uses GitHub Actions to perform CI/CD operations.
+
 Technologies
 
 - JavaScript
