@@ -13,8 +13,6 @@ on:
 
   schedule:
     - cron: "*/5 * * * *" #change minutes to 0 to run on every hour 
-  
-  workflow_run:
     
 jobs:
   hello:  #New job added to print hello message #Assignment work
